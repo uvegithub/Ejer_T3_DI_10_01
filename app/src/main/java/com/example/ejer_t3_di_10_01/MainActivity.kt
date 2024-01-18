@@ -3,14 +3,15 @@ package com.example.ejer_t3_di_10_01
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.ejer_t3_di_10_01.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), OnClickListener {
 
     private lateinit var binding: ActivityMainBinding
-    private lateinit var pokemonAdapter: ContactoAdapter
+    private lateinit var contactoAdapter: ContactoAdapter
 
-    private lateinit var imagen01: ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -18,8 +19,21 @@ class MainActivity : AppCompatActivity() {
 
 
         val data = mutableListOf(
-            Contacto(getDrawable(R.drawable.foto_redonda)!!, "Lucia", 11111, "lu@gmail.com")!! ,
+            Contacto(getDrawable(R.drawable.foto_redonda)!!, "Lucia", 611111, "lu@gmail.com")!!,
+            Contacto(getDrawable(R.drawable.foto_redonda2)!!, "María", 622222, "ma@gmail.com")!!,
+            Contacto(getDrawable(R.drawable.foto_redonda3)!!, "Teresa", 633333, "te@gmail.com")!!,
+            Contacto(getDrawable(R.drawable.foto_redonda4)!!, "Valentina", 644444, "va@gmail.com")!!
         )
+
+        contactoAdapter = ContactoAdapter(data, this)
+
+       binding.recycler.apply{
+            layoutManager = LinearLayoutManager(this@MainActivity)
+            adapter = contactoAdapter
+        }
+    }
+
+    override fun onLongClick(contacto: Contacto) {
 
     }
 }
