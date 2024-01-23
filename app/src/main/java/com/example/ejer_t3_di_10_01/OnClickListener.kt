@@ -4,3 +4,4 @@ interface OnClickListener {
 
     fun onLongClick(contacto: Contacto)
 }
+

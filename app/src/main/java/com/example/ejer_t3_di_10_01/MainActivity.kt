@@ -1,7 +1,9 @@
 package com.example.ejer_t3_di_10_01
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -35,5 +37,10 @@ class MainActivity : AppCompatActivity(), OnClickListener {
 
     override fun onLongClick(contacto: Contacto) {
 
+    }
+
+    fun iniciarActividadEjercicio2 (view : View){
+        val intent = Intent(this, Ejercicio_2::class.java)
+        startActivity(intent)
     }
 }
