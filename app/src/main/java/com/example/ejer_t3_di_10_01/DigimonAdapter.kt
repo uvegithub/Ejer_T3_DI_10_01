@@ -36,4 +36,5 @@ class DigimonAdapter(var lista_digimons: MutableList<Digimon>, private val liste
         lista_digimons.remove(digimon)
         notifyDataSetChanged()
     }
+
 }

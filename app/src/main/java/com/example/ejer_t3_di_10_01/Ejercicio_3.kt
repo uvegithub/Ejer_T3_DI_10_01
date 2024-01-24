@@ -61,6 +61,10 @@ class Ejercicio_3 : AppCompatActivity(), OnClickListener {
         digimonAdapter.anadirDigimon(digimon)
     }
 
+    override fun onDigimonDesEvolucionado(digimon: Digimon4) {
+        TODO("Not yet implemented")
+    }
+
     private fun borrarDigimonAutomaticamente(digimon: Digimon){
         val builder=AlertDialog.Builder(this)
         builder.setTitle("Eliminar digimon")
@@ -79,6 +83,13 @@ class Ejercicio_3 : AppCompatActivity(), OnClickListener {
     }
 
     override fun onLongClick(contacto: Contacto) {
+
+    }
+
+    override fun onLongClick(digimon: Digimon4){
+
+    } //funcion que se ejecuta cuando se hace click largo en un elemento de la lista
+    override fun onDigimonEvolucionado(digimon: Digimon4){
 
     }
 

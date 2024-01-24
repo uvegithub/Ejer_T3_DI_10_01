@@ -35,6 +35,10 @@ class MainActivity : AppCompatActivity(), OnClickListener {
         }
     }
 
+    override fun onDigimonDesEvolucionado(digimon: Digimon4) {
+        TODO("Not yet implemented")
+    }
+
     override fun onLongClick(contacto: Contacto) {
 
     }
@@ -42,5 +46,12 @@ class MainActivity : AppCompatActivity(), OnClickListener {
     fun iniciarActividadEjercicio2 (view : View){
         val intent = Intent(this, Ejercicio_2::class.java)
         startActivity(intent)
+    }
+
+    override fun onLongClick(digimon: Digimon4){
+
+    } //funcion que se ejecuta cuando se hace click largo en un elemento de la lista
+    override fun onDigimonEvolucionado(digimon: Digimon4){
+
     }
 }

@@ -54,4 +54,15 @@ class Ejercicio_2 : AppCompatActivity(), OnClickListener {
 
     }
 
+    override fun onLongClick(digimon: Digimon4) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onDigimonEvolucionado(digimon: Digimon4) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onDigimonDesEvolucionado(digimon: Digimon4) {
+        TODO("Not yet implemented")
+    }
 }
