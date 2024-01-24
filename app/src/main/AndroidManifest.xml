@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Ejer_T3_DI_10_01"
         tools:targetApi="31">
         <activity
+            android:name=".Ejercicio_4"
+            android:exported="false" />
+        <activity
             android:name=".Ejercicio_3"
             android:exported="false" />
         <activity
